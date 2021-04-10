@@ -8,6 +8,12 @@ use Tleckie\DesignPatterns\Memento\Memento;
 use Tleckie\DesignPatterns\Memento\Originator;
 use Tleckie\DesignPatterns\Memento\State;
 
+/**
+ * Class OriginatorTest
+ *
+ * @package Tleckie\DesignPatterns\Tests\Memento
+ * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
+ */
 class OriginatorTest extends TestCase
 {
     /** @var State|MockObject */
