@@ -26,3 +26,27 @@ $historic->undo();
 var_dump($originator->state()->name());
 
 ```
+
+### State:
+```php
+<?php
+
+use Tleckie\DesignPatterns\State\Car;
+use Tleckie\DesignPatterns\State\OffState;
+use Exception;
+
+$car = new Car(new OffState());
+$car->isOn(); // false
+
+try{
+
+    $car->turnOff(); // trow Exception
+
+}catch(Exception $exception){
+
+}
+
+$car->turnOn(); // OnState
+$car->isOn(); // true
+$car->speedUp(); //SpeedUp state
+```
