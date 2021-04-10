@@ -48,5 +48,5 @@ try{
 
 $car->turnOn(); // OnState
 $car->isOn(); // true
-$car->speedUp(); //SpeedUp state
+$car->speedUp(); //SpeedUpState
 ```
