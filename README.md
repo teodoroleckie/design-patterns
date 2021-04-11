@@ -68,3 +68,26 @@ $context->execute($terms); // 18
 $context->changeStrategy(new DivisionStrategy)->execute($terms); // 2
 $context->changeStrategy(new SumStrategy)->execute($terms); // 9
 ```
+
+### Chain of Responsibility:
+```php
+<?php
+
+use Tleckie\DesignPatterns\ChainResponsibility\DivisionOperation;
+use Tleckie\DesignPatterns\ChainResponsibility\SumOperation;
+use Tleckie\DesignPatterns\ChainResponsibility\SubtractionOperation;
+use Tleckie\DesignPatterns\ChainResponsibility\Operation;
+
+$divisionOperationHandler = new DivisionOperation();
+$sumOperationHandler = new SumOperation();
+$subtractionOperationHandler = new SubtractionOperation();
+
+$divisionOperationHandler
+->next($sumOperationHandler)
+->next($subtractionOperationHandler);
+
+$divisionOperationHandler->handle(new Operation('SUBTRACTION', 10,2)); // 8
+$divisionOperationHandler->handle(new Operation('DIVISION', 10,2)); // 5
+$divisionOperationHandler->handle(new Operation('SUM', 10,2)); // 12
+$divisionOperationHandler->handle(new Operation('INVALID', 10,2)); // null
+```
