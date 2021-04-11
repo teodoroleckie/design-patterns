@@ -79,12 +79,10 @@ use Tleckie\DesignPatterns\ChainResponsibility\SubtractionOperation;
 use Tleckie\DesignPatterns\ChainResponsibility\Operation;
 
 $divisionOperationHandler = new DivisionOperation();
-$sumOperationHandler = new SumOperation();
-$subtractionOperationHandler = new SubtractionOperation();
 
 $divisionOperationHandler
-->next($sumOperationHandler)
-->next($subtractionOperationHandler);
+    ->next(new SumOperation())
+    ->next(new SubtractionOperation());
 
 $divisionOperationHandler->handle(new Operation('SUBTRACTION', 10,2)); // 8
 $divisionOperationHandler->handle(new Operation('DIVISION', 10,2)); // 5
