@@ -12,18 +12,18 @@ use Tleckie\DesignPatterns\Memento\State;
 $originator = new Originator(new State('Name 1', 'value 1'));
 $historic = new History($originator);
 
-var_dump($originator->state()->name()); // 'Name 1'
+$originator->state()->name(); // 'Name 1'
 $originator->changeState(new State('Name 1', 'value 1'));
 $historic->save();
 
 $originator->changeState(new State('Name 2', 'value 2'));
-var_dump($originator->state()->name()); // 'Name 2'
+$originator->state()->name(); // 'Name 2'
 
 $historic->undo();
-var_dump($originator->state()->name()); // 'Name 1'
+$originator->state()->name(); // 'Name 1'
 
 $historic->undo();
-var_dump($originator->state()->name()); // 'Name 1'
+$originator->state()->name(); // 'Name 1'
 
 ```
 
@@ -49,4 +49,22 @@ try{
 $car->turnOn(); // OnState
 $car->isOn(); // true
 $car->speedUp(); //SpeedUpState
+```
+
+### Strategy:
+```php
+<?php
+
+use Tleckie\DesignPatterns\Strategy\Context;
+use Tleckie\DesignPatterns\Strategy\Terms;
+use Tleckie\DesignPatterns\Strategy\MultiplyStrategy;
+use Tleckie\DesignPatterns\Strategy\DivisionStrategy;
+use Tleckie\DesignPatterns\Strategy\SumStrategy;
+
+$context = new Context(new MultiplyStrategy);
+$terms = new Terms(6,3);
+
+$context->execute($terms); // 18
+$context->changeStrategy(new DivisionStrategy)->execute($terms); // 2
+$context->changeStrategy(new SumStrategy)->execute($terms); // 9
 ```
