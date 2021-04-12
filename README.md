@@ -89,3 +89,24 @@ $divisionOperationHandler->handle(new Operation('DIVISION', 10,2)); // 5
 $divisionOperationHandler->handle(new Operation('SUM', 10,2)); // 12
 $divisionOperationHandler->handle(new Operation('INVALID', 10,2)); // null
 ```
+
+### Decorator:
+```php
+<?php
+
+use Tleckie\DesignPatterns\Decorator\NullNormalize;
+use Tleckie\DesignPatterns\Decorator\LowerNormalize;
+use Tleckie\DesignPatterns\Decorator\TextNormalize;
+use Tleckie\DesignPatterns\Decorator\SpacingNormalize;
+
+$decorator = new SpacingNormalize(
+    new LowerNormalize(
+        new TextNormalize(
+            new NullNormalize
+        )
+    )
+);
+
+$text = 'SAME random TEXT!';
+$decorator->normalize($text); // same-random-text!
+```
