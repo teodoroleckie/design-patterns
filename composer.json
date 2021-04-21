@@ -1,6 +1,6 @@
 {
   "name": "tleckie/design-patterns",
-  "license": "LGPL-3.0-only",
+  "license": "MIT",
   "description": "PHP design patterns",
   "type": "library",
   "homepage": "https://github.com/teodoroleckie/design-patterns",
