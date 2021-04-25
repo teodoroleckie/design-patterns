@@ -17,5 +17,4 @@ class OffState extends State
     {
         return new OnState();
     }
-
 }

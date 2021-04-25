@@ -10,19 +10,18 @@ namespace Tleckie\DesignPatterns\ChainResponsibility;
  */
 interface OperationInterface
 {
-
     /**
      * @return string
      */
     public function type(): string;
 
     /**
-     * @return int|float
+     * @return float
      */
-    public function numberOne(): int|float;
+    public function numberOne(): float;
 
     /**
-     * @return int|float
+     * @return float
      */
-    public function numberTwo(): int|float;
+    public function numberTwo(): float;
 }

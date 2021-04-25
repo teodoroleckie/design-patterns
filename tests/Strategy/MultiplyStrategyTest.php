@@ -2,9 +2,9 @@
 
 namespace Tleckie\DesignPatterns\Tests\Strategy;
 
+use PHPUnit\Framework\TestCase;
 use Tleckie\DesignPatterns\Strategy\MultiplyStrategy;
 use Tleckie\DesignPatterns\Strategy\Terms;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class MultiplyStrategyTest
@@ -19,6 +19,6 @@ class MultiplyStrategyTest extends TestCase
      */
     public function calculate(): void
     {
-        static::assertEquals(18, (new MultiplyStrategy)->calculate(new Terms(6,3)));
+        static::assertEquals(18, (new MultiplyStrategy())->calculate(new Terms(6, 3)));
     }
 }

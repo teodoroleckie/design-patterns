@@ -2,9 +2,9 @@
 
 namespace Tleckie\DesignPatterns\Tests\Strategy;
 
+use PHPUnit\Framework\TestCase;
 use Tleckie\DesignPatterns\Strategy\DivisionStrategy;
 use Tleckie\DesignPatterns\Strategy\Terms;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class DivisionStrategyTest
@@ -19,6 +19,6 @@ class DivisionStrategyTest extends TestCase
      */
     public function calculate(): void
     {
-        static::assertEquals(2, (new DivisionStrategy)->calculate(new Terms(6,3)));
+        static::assertEquals(2, (new DivisionStrategy())->calculate(new Terms(6, 3)));
     }
 }

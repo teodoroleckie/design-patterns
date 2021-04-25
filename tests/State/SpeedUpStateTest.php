@@ -18,11 +18,6 @@ class SpeedUpStateTest extends TestCase
     /** @var Car */
     private Car $car;
 
-    protected function setUp(): void
-    {
-        $this->car = new Car(new SpeedUpState());
-    }
-
     /**
      * @test
      */
@@ -61,4 +56,8 @@ class SpeedUpStateTest extends TestCase
         $this->car->turnOff();
     }
 
+    protected function setUp(): void
+    {
+        $this->car = new Car(new SpeedUpState());
+    }
 }

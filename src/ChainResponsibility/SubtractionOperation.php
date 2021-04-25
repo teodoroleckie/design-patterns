@@ -15,9 +15,9 @@ class SubtractionOperation extends Handler
 
     /**
      * @param OperationInterface $operation
-     * @return int|null
+     * @return float|null
      */
-    public function handle(OperationInterface $operation): ?int
+    public function handle(OperationInterface $operation): float|null
     {
         if ($operation->type() === static::TYPE) {
             return $operation->numberOne() - $operation->numberTwo();

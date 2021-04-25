@@ -13,20 +13,20 @@ class Operation implements OperationInterface
     /** @var string */
     private string $type;
 
-    /** @var int|float */
-    private int|float $numberOne;
+    /** @var float */
+    private float $numberOne;
 
-    /** @var int|float */
-    private int|float $numberTwo;
+    /** @var float */
+    private float $numberTwo;
 
     /**
      * Operation constructor.
      *
-     * @param string    $type
-     * @param float|int $numberOne
-     * @param float|int $numberTwo
+     * @param string $type
+     * @param float  $numberOne
+     * @param float  $numberTwo
      */
-    public function __construct(string $type, float|int $numberOne, float|int $numberTwo)
+    public function __construct(string $type, float $numberOne, float $numberTwo)
     {
         $this->type = $type;
         $this->numberOne = $numberOne;
@@ -42,17 +42,17 @@ class Operation implements OperationInterface
     }
 
     /**
-     * @return int|float
+     * @return float
      */
-    public function numberOne(): int|float
+    public function numberOne(): float
     {
         return $this->numberOne;
     }
 
     /**
-     * @return int|float
+     * @return float
      */
-    public function numberTwo(): int|float
+    public function numberTwo(): float
     {
         return $this->numberTwo;
     }

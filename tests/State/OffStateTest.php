@@ -18,17 +18,11 @@ class OffStateTest extends TestCase
     /** @var Car */
     private Car $car;
 
-    protected function setUp(): void
-    {
-        $this->car = new Car(new OffState());
-    }
-
     /**
      * @test
      */
     public function turnOn(): void
     {
-
         static::assertFalse($this->car->isOn());
 
         static::assertInstanceOf(Car::class, $this->car->turnOn());
@@ -66,4 +60,8 @@ class OffStateTest extends TestCase
         $this->car->turnOff();
     }
 
+    protected function setUp(): void
+    {
+        $this->car = new Car(new OffState());
+    }
 }

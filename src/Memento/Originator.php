@@ -60,5 +60,4 @@ class Originator
 
         return $memento;
     }
-
 }

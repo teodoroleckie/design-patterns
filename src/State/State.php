@@ -18,7 +18,7 @@ class State implements CarState
      */
     public function speedUp(): SpeedUpState
     {
-        throw new Exception;
+        throw new Exception();
     }
 
     /**
@@ -27,7 +27,7 @@ class State implements CarState
      */
     public function brake(): BrakeState
     {
-        throw new Exception;
+        throw new Exception();
     }
 
     /**
@@ -36,7 +36,7 @@ class State implements CarState
      */
     public function turnOff(): OffState
     {
-        throw new Exception;
+        throw new Exception();
     }
 
     /**
@@ -45,6 +45,6 @@ class State implements CarState
      */
     public function turnOn(): OnState
     {
-        throw new Exception;
+        throw new Exception();
     }
 }

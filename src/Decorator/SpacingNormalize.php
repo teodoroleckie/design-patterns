@@ -16,6 +16,6 @@ class SpacingNormalize extends TextNormalize
      */
     public function normalize(string $text): string
     {
-        return str_replace(' ', '-',$this->normalize->normalize($text));
+        return str_replace(' ', '-', $this->normalize->normalize($text));
     }
 }

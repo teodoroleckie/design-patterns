@@ -18,11 +18,6 @@ class OnStateTest extends TestCase
     /** @var Car */
     private Car $car;
 
-    protected function setUp(): void
-    {
-        $this->car = new Car(new OnState());
-    }
-
     /**
      * @test
      */
@@ -63,4 +58,8 @@ class OnStateTest extends TestCase
         static::assertFalse($this->car->isOn());
     }
 
+    protected function setUp(): void
+    {
+        $this->car = new Car(new OnState());
+    }
 }

@@ -18,11 +18,6 @@ class BrakeStateTest extends TestCase
     /** @var Car */
     private Car $car;
 
-    protected function setUp(): void
-    {
-        $this->car = new Car(new BrakeState());
-    }
-
     /**
      * @test
      */
@@ -63,4 +58,8 @@ class BrakeStateTest extends TestCase
         static::assertFalse($this->car->isOn());
     }
 
+    protected function setUp(): void
+    {
+        $this->car = new Car(new BrakeState());
+    }
 }

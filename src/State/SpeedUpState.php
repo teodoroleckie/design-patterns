@@ -25,5 +25,4 @@ class SpeedUpState extends State
     {
         return new BrakeState();
     }
-
 }

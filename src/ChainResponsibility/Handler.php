@@ -13,7 +13,7 @@ class Handler implements HandlerInterface
     /** @var string */
     protected const TYPE = '';
 
-    /** @var HandlerInterface|null  */
+    /** @var HandlerInterface|null */
     protected HandlerInterface|null $handler;
 
     /**
@@ -37,9 +37,9 @@ class Handler implements HandlerInterface
 
     /**
      * @param OperationInterface $operation
-     * @return int|null
+     * @return float|null
      */
-    public function handle(OperationInterface $operation): ?int
+    public function handle(OperationInterface $operation): float|null
     {
         if ($this->handler) {
             return $this->handler->handle($operation);
@@ -47,5 +47,4 @@ class Handler implements HandlerInterface
 
         return null;
     }
-
 }

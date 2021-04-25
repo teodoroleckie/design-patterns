@@ -10,7 +10,7 @@ namespace Tleckie\DesignPatterns\Strategy;
  */
 class Context implements ContextInterface
 {
-    /** @var StrategyInterface  */
+    /** @var StrategyInterface */
     private StrategyInterface $strategy;
 
     /**

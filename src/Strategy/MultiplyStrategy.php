@@ -16,6 +16,6 @@ class MultiplyStrategy implements StrategyInterface
      */
     public function calculate(TermsInterface $term): int|float
     {
-       return $term->termOne() * $term->termTwo();
+        return $term->termOne() * $term->termTwo();
     }
 }

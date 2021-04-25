@@ -2,9 +2,9 @@
 
 namespace Tleckie\DesignPatterns\Tests\Strategy;
 
+use PHPUnit\Framework\TestCase;
 use Tleckie\DesignPatterns\Strategy\SumStrategy;
 use Tleckie\DesignPatterns\Strategy\Terms;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class SumStrategyTest
@@ -19,6 +19,6 @@ class SumStrategyTest extends TestCase
      */
     public function calculate(): void
     {
-        static::assertEquals(9, (new SumStrategy)->calculate(new Terms(6,3)));
+        static::assertEquals(9, (new SumStrategy())->calculate(new Terms(6, 3)));
     }
 }

@@ -10,7 +10,6 @@ namespace Tleckie\DesignPatterns\ChainResponsibility;
  */
 interface HandlerInterface
 {
-
     /**
      * @param HandlerInterface $handler
      * @return HandlerInterface
@@ -19,7 +18,7 @@ interface HandlerInterface
 
     /**
      * @param OperationInterface $operation
-     * @return int|null
+     * @return float|null
      */
-    public function handle(OperationInterface $operation): ?int;
+    public function handle(OperationInterface $operation): float|null;
 }

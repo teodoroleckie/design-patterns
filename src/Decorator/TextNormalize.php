@@ -10,7 +10,7 @@ namespace Tleckie\DesignPatterns\Decorator;
  */
 class TextNormalize implements NormalizeInterface
 {
-    /** @var NormalizeInterface  */
+    /** @var NormalizeInterface */
     protected NormalizeInterface $normalize;
 
     /**

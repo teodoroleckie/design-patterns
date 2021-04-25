@@ -2,10 +2,10 @@
 
 namespace Tleckie\DesignPatterns\Tests\Strategy;
 
-use Tleckie\DesignPatterns\Strategy\SumStrategy;
-use Tleckie\DesignPatterns\Strategy\Context;
-use Tleckie\DesignPatterns\Strategy\Terms;
 use PHPUnit\Framework\TestCase;
+use Tleckie\DesignPatterns\Strategy\Context;
+use Tleckie\DesignPatterns\Strategy\SumStrategy;
+use Tleckie\DesignPatterns\Strategy\Terms;
 
 /**
  * Class ContextTest
@@ -15,12 +15,12 @@ use PHPUnit\Framework\TestCase;
  */
 class ContextTest extends TestCase
 {
-    /** @var Context  */
+    /** @var Context */
     private Context $context;
 
     public function setUp(): void
     {
-        $this->context = new Context(new SumStrategy);
+        $this->context = new Context(new SumStrategy());
     }
 
     /**
@@ -28,6 +28,6 @@ class ContextTest extends TestCase
      */
     public function calculate(): void
     {
-        static::assertEquals(9, $this->context->execute(new Terms(6,3)));
+        static::assertEquals(9, $this->context->execute(new Terms(6, 3)));
     }
 }

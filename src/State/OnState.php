@@ -33,5 +33,4 @@ class OnState extends State
     {
         return new OffState();
     }
-
 }

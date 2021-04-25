@@ -16,7 +16,7 @@ use Tleckie\DesignPatterns\Decorator\TextNormalize;
  */
 class SpacingNormalizeTest extends TestCase
 {
-    /** @var SpacingNormalize  */
+    /** @var SpacingNormalize */
     private SpacingNormalize $normalize;
 
     public function setUp(): void

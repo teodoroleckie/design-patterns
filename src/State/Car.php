@@ -78,5 +78,4 @@ class Car
     {
         return !$this->state instanceof OffState;
     }
-
 }
