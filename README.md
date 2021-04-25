@@ -1,4 +1,10 @@
 ## Design Patterns in PHP
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tleckie/design-patterns.svg?style=flat-square)](https://packagist.org/packages/tleckie/design-patterns)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/teodoroleckie/design-patterns/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/teodoroleckie/design-patterns/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/teodoroleckie/design-patterns/badges/build.png?b=master)](https://scrutinizer-ci.com/g/teodoroleckie/design-patterns/build-status/master)
+[![Total Downloads](https://img.shields.io/packagist/dt/tleckie/design-patterns.svg?style=flat-square)](https://packagist.org/packages/tleckie/design-patterns)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/teodoroleckie/design-patterns/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 
 ### Memento:
 
